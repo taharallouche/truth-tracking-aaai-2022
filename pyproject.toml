@@ -1,0 +1,50 @@
+[project]
+name = "paper_results"
+version = "0.1.0"
+description = "Reprouce the results in Truth-Tracking via Approval Voting: Size Matters, AAAI 2022"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "hakeem>=0.1.1",
+    "matplotlib>=3.9.2",
+    "scikit-learn>=1.5.2",
+    "tqdm>=4.66.5",
+]
+
+
+[tool.poetry]
+name = 'paper_results'
+version = '0.1.1'
+description = "Reprouce the results in Truth-Tracking via Approval Voting: Size Matters, AAAI 2022"
+authors = [
+    "Tahar Allouche <tahar.allouche.pro@gmail.com>",
+]
+packages = [
+    { include = "paper_results" },
+]
+
+[tool.poetry.dependencies]
+python = '^3.12'
+hakeem = '0.1.1'
+
+
+[tool.uv]
+package = true
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.3",
+]
+
+
+
+[build-system]
+requires = ['poetry-core~=1.0']
+build-backend = 'poetry.core.masonry.api'
+
+
+[tool.pytest.ini_options]
+markers = [
+    "ut: unit-test",
+    "e2e: end-to-end",
+]
